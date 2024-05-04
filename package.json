@@ -12,7 +12,8 @@
     "build-client": "next build",
     "start-client": "nodemon --watch server --exec \"next dev\"",
     "start": "npm run start-server & npm run start-client",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "npm run build-server && npm run build-client"
   },
   "author": "",
   "license": "ISC",
