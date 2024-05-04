@@ -1,8 +1,7 @@
 import {Pool} from 'pg';
-const initializeDB = require('./Controllers/dbInitializer')
+import { initializeDB } from './Controllers/dbInitializer';
 
 require('dotenv').config()
-
 
 const pool = new Pool(
     {

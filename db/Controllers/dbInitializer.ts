@@ -1,10 +1,11 @@
 import { Pool } from 'pg';
 
-async function initializeDB (pool : Pool) 
+export const initializeDB = async (pool : Pool) =>
 {
     try
     {
         const client = await pool.connect();
+        
         await client.query('DROP TABLE IF EXISTS users');
 
         await client.query(
@@ -29,5 +30,3 @@ async function initializeDB (pool : Pool)
         console.error('Error executing query:', err);
     }
 }
-
-module.exports = initializeDB;
