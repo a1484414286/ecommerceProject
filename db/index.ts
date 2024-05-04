@@ -9,12 +9,13 @@ const pool = new Pool(
         host :  process.env.HOST,
         database :  process.env.DATABASE,
         password : process.env.PASSWORD,
-        port: 5432
+        port: parseInt(process.env.PORT || '')
     }
 );
 
 initializeDB(pool);
 
+console.log(`Database has started at port ${process.env.PORT}`);
 
 // pool.query('SELECT NOW()', (err, result) => {
 //         if (err) {
