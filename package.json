@@ -6,11 +6,11 @@
   "main": "index.ts",
   "scripts": {
     "build-server": "npx tsc",
-    "start-server": "ts-node-dev --transpile-only db/index.ts",
-    "dev-server": "nodemon db/index.ts",
-    "dev-client": "next dev",
+    "start-server": "ts-node-dev --transpile-only db/app.ts",
+    "dev-server": "nodemon db/app.ts",
+    "dev-client": "next dev --port 3000",
     "build-client": "next build",
-    "start-client": "nodemon --watch server --exec \"next dev\"",
+    "start-client": "nodemon --watch server --exec \"next dev --port 3000\"",
     "start": "npm run start-server & npm run start-client",
     "lint": "next lint",
     "deploy": "npm run build-server && npm run build-client"

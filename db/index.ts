@@ -13,10 +13,6 @@ const pool = new Pool(
     }
 );
 
-initializeDB(pool);
-
-console.log(`Database has started at port ${process.env.PORT}`);
-
 // pool.query('SELECT NOW()', (err, result) => {
 //         if (err) {
 //                 console.error('Error executing query', err.stack);
