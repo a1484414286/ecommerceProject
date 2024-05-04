@@ -1,7 +1,8 @@
 import {Pool} from 'pg';
 
 require('dotenv').config()
-console.log(process.env)
+
+
 const pool = new Pool(
     {
         user : process.env.USER ,

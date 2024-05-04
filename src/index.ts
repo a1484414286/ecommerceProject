@@ -8,6 +8,8 @@ const app = express();
 
 app.use(cors());
 app.use(helmet());
+
+
 app.get('/', (req: Request, res: Response) => {
     res.send('Express + TypeScript Server');
 });
