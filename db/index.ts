@@ -1,4 +1,5 @@
 import {Pool} from 'pg';
+const initializeDB = require('./Controllers/dbInitializer')
 
 require('dotenv').config()
 
@@ -12,12 +13,16 @@ const pool = new Pool(
         port: 5432
     }
 );
-pool.query('SELECT NOW()', (err, result) => {
-        if (err) {
-                console.error('Error executing query', err.stack);
-                return;
-        }
-        console.log('Query result:', result.rows);
-});
+
+initializeDB(pool);
+
+
+// pool.query('SELECT NOW()', (err, result) => {
+//         if (err) {
+//                 console.error('Error executing query', err.stack);
+//                 return;
+//         }
+//         console.log('Query result:', result.rows);
+// });
 
 export default pool;
