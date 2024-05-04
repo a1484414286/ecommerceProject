@@ -11,9 +11,9 @@
     "dev-client": "next dev --port 3000",
     "build-client": "next build",
     "start-client": "nodemon --watch server --exec \"next dev --port 3000\"",
-    "start": "npm run start-server & npm run start-client",
+    "start": "npm-run-all --parallel start-server start-client",
     "lint": "next lint",
-    "deploy": "npm run build-server && npm run build-client"
+    "deploy": "npm run build-server & npm run build-client"
   },
   "author": "",
   "license": "ISC",
@@ -43,6 +43,7 @@
     "eslint-config-next": "14.2.3",
     "express": "^4.17.1",
     "nodemon": "^3.1.0",
+    "npm-run-all": "^4.1.5",
     "pg": "^8.11.5",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.3",
