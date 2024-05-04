@@ -115,3 +115,5 @@ yarn v2
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.
+
+.gitignore
